@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="title desc">
+  <title id="title">Capa de girassol</title>
+  <desc id="desc">Ilustração estilizada de um girassol em uma noite azul inspirada em pintura.</desc>
+  <defs>
+    <radialGradient id="sky" cx="50%" cy="35%" r="75%">
+      <stop offset="0%" stop-color="#29579a"/>
+      <stop offset="48%" stop-color="#163d75"/>
+      <stop offset="100%" stop-color="#091b3b"/>
+    </radialGradient>
+    <radialGradient id="center" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6f3e13"/>
+      <stop offset="100%" stop-color="#3d1f08"/>
+    </radialGradient>
+    <linearGradient id="stem" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5c8e34"/>
+      <stop offset="100%" stop-color="#2f5b1f"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="800" fill="url(#sky)"/>
+  <circle cx="126" cy="136" r="20" fill="#f8d25e" opacity="0.9"/>
+  <circle cx="658" cy="162" r="12" fill="#f8d25e" opacity="0.75"/>
+  <circle cx="594" cy="88" r="8" fill="#f8d25e" opacity="0.72"/>
+  <path d="M0 640 C110 580 198 558 295 586 C376 609 449 620 562 582 C644 554 719 536 800 565 V800 H0Z" fill="#14325f" opacity="0.95"/>
+  <path d="M0 685 C84 649 165 639 252 657 C325 672 403 697 492 679 C584 661 674 624 800 645 V800 H0Z" fill="#0d2649" opacity="0.88"/>
+
+  <g transform="translate(400 372)">
+    <g fill="#f4b942">
+      <ellipse rx="44" ry="148" transform="rotate(0) translate(0 -156)"/>
+      <ellipse rx="44" ry="148" transform="rotate(30) translate(0 -156)"/>
+      <ellipse rx="44" ry="148" transform="rotate(60) translate(0 -156)"/>
+      <ellipse rx="44" ry="148" transform="rotate(90) translate(0 -156)"/>
+      <ellipse rx="44" ry="148" transform="rotate(120) translate(0 -156)"/>
+      <ellipse rx="44" ry="148" transform="rotate(150) translate(0 -156)"/>
+      <ellipse rx="44" ry="148" transform="rotate(180) translate(0 -156)"/>
+      <ellipse rx="44" ry="148" transform="rotate(210) translate(0 -156)"/>
+      <ellipse rx="44" ry="148" transform="rotate(240) translate(0 -156)"/>
+      <ellipse rx="44" ry="148" transform="rotate(270) translate(0 -156)"/>
+      <ellipse rx="44" ry="148" transform="rotate(300) translate(0 -156)"/>
+      <ellipse rx="44" ry="148" transform="rotate(330) translate(0 -156)"/>
+    </g>
+    <g fill="#ffd86b">
+      <ellipse rx="30" ry="116" transform="rotate(15) translate(0 -146)"/>
+      <ellipse rx="30" ry="116" transform="rotate(45) translate(0 -146)"/>
+      <ellipse rx="30" ry="116" transform="rotate(75) translate(0 -146)"/>
+      <ellipse rx="30" ry="116" transform="rotate(105) translate(0 -146)"/>
+      <ellipse rx="30" ry="116" transform="rotate(135) translate(0 -146)"/>
+      <ellipse rx="30" ry="116" transform="rotate(165) translate(0 -146)"/>
+      <ellipse rx="30" ry="116" transform="rotate(195) translate(0 -146)"/>
+      <ellipse rx="30" ry="116" transform="rotate(225) translate(0 -146)"/>
+      <ellipse rx="30" ry="116" transform="rotate(255) translate(0 -146)"/>
+      <ellipse rx="30" ry="116" transform="rotate(285) translate(0 -146)"/>
+      <ellipse rx="30" ry="116" transform="rotate(315) translate(0 -146)"/>
+      <ellipse rx="30" ry="116" transform="rotate(345) translate(0 -146)"/>
+    </g>
+    <circle r="118" fill="url(#center)"/>
+    <circle r="92" fill="none" stroke="#8c531d" stroke-width="10" stroke-dasharray="4 16" stroke-linecap="round"/>
+  </g>
+
+  <path d="M384 488 C379 566 374 645 375 800 H436 C429 678 425 592 438 500 Z" fill="url(#stem)"/>
+  <path d="M380 566 C314 534 257 540 207 603 C271 606 334 616 386 639 Z" fill="#4f7f2b"/>
+  <path d="M428 612 C490 577 560 584 624 651 C552 651 486 664 419 690 Z" fill="#5f9336"/>
+</svg>

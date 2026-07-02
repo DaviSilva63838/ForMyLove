@@ -1,0 +1,698 @@
+:root {
+  --bg: #163869;
+  --bg-deep: #0a1d3d;
+  --panel: rgba(255, 245, 212, 0.14);
+  --panel-strong: rgba(255, 248, 229, 0.2);
+  --paper: #fff8e7;
+  --paper-line: rgba(219, 167, 64, 0.18);
+  --text: #fff7dc;
+  --text-soft: rgba(255, 247, 220, 0.82);
+  --text-dark: #4a3514;
+  --accent: #f2be4d;
+  --accent-deep: #cf8e1c;
+  --accent-warm: #ffe18a;
+  --shadow: 0 24px 60px rgba(8, 22, 47, 0.34);
+  --radius-xl: 2rem;
+  --radius-lg: 1.5rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Manrope", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 12% 10%, rgba(255, 223, 117, 0.35), transparent 12%),
+    radial-gradient(circle at 88% 14%, rgba(255, 214, 92, 0.24), transparent 10%),
+    radial-gradient(circle at 26% 84%, rgba(251, 188, 67, 0.18), transparent 14%),
+    linear-gradient(180deg, rgba(10, 29, 61, 0.3), rgba(10, 29, 61, 0.46)),
+    url("https://commons.wikimedia.org/wiki/Special:FilePath/Vincent_Willem_van_Gogh_127.jpg") center top/cover fixed;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+}
+
+.page-glow {
+  position: fixed;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 50%;
+  filter: blur(26px);
+  opacity: 0.32;
+  pointer-events: none;
+}
+
+.glow-left {
+  top: -5rem;
+  left: -6rem;
+  background: rgba(255, 214, 102, 0.35);
+}
+
+.glow-right {
+  right: -5rem;
+  bottom: 10rem;
+  background: rgba(55, 116, 196, 0.24);
+}
+
+.page {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 32rem);
+  margin: 0 auto;
+  padding: 1rem 1rem 2.5rem;
+}
+
+.hero-card,
+.note-panel,
+.gallery-panel,
+.letter-scene {
+  position: relative;
+  margin-top: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+}
+
+.hero-card {
+  overflow: hidden;
+  padding: 1.5rem;
+  min-height: 34rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background:
+    linear-gradient(180deg, rgba(8, 20, 45, 0.01), rgba(8, 20, 45, 0.44)),
+    url("assets/photos/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg.webp") center 12%/cover;
+  border-color: rgba(255, 225, 138, 0.16);
+  box-shadow:
+    0 24px 60px rgba(8, 22, 47, 0.34),
+    inset 0 0 0 2px rgba(255, 228, 148, 0.08);
+}
+
+.hero-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 14% 20%, rgba(255, 225, 138, 0.22), transparent 10%),
+    radial-gradient(circle at 77% 18%, rgba(255, 225, 138, 0.14), transparent 7%),
+    radial-gradient(circle at 60% 36%, rgba(86, 145, 224, 0.1), transparent 10%),
+    linear-gradient(180deg, rgba(10, 29, 61, 0.01), rgba(10, 29, 61, 0.42));
+}
+
+.hero-card::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 24%;
+  background:
+    linear-gradient(180deg, transparent, rgba(5, 14, 31, 0.1) 20%, rgba(5, 14, 31, 0.38)),
+    radial-gradient(circle at 12% 120%, rgba(11, 31, 65, 0.82) 0 15%, transparent 16%),
+    radial-gradient(circle at 30% 116%, rgba(19, 52, 95, 0.74) 0 13%, transparent 14%),
+    radial-gradient(circle at 52% 118%, rgba(11, 31, 65, 0.82) 0 14%, transparent 15%),
+    radial-gradient(circle at 74% 120%, rgba(19, 52, 95, 0.74) 0 13%, transparent 14%),
+    radial-gradient(circle at 92% 116%, rgba(11, 31, 65, 0.82) 0 12%, transparent 13%);
+  pointer-events: none;
+}
+
+.hero-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-copy {
+  width: min(100%, 42rem);
+  padding: 1.45rem 1.35rem;
+  border-radius: 1.8rem;
+  background: linear-gradient(180deg, rgba(9, 24, 49, 0.76), rgba(9, 24, 49, 0.54));
+  border: 1px solid rgba(255, 228, 148, 0.18);
+  box-shadow: 0 22px 44px rgba(5, 14, 31, 0.28);
+  backdrop-filter: blur(8px);
+}
+
+.eyebrow,
+.section-kicker {
+  margin: 0 0 0.85rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.24rem;
+  text-transform: uppercase;
+  color: #ffe18a;
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  line-height: 0.95;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  max-width: 11ch;
+  line-height: 0.98;
+  color: #fff8de;
+  text-shadow: 0 8px 24px rgba(5, 14, 31, 0.32);
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  font-size: clamp(2rem, 8vw, 2.8rem);
+}
+
+.intro {
+  margin: 1.15rem 0 0;
+  max-width: 37rem;
+  line-height: 1.95;
+  font-size: 1.16rem;
+  color: rgba(255, 246, 218, 0.94);
+  text-wrap: balance;
+}
+
+.note-panel,
+.gallery-panel,
+.letter-scene {
+  padding: 1.35rem;
+  background: linear-gradient(180deg, var(--panel-strong), var(--panel));
+}
+
+.gallery-panel {
+  overflow: hidden;
+  border-color: rgba(193, 226, 255, 0.24);
+  background:
+    linear-gradient(180deg, rgba(31, 53, 97, 0.16), rgba(31, 53, 97, 0.5)),
+    url("https://commons.wikimedia.org/wiki/Special:FilePath/Vincent_van_Gogh_-_Irises_-_Google_Art_Project.jpg") center/cover;
+}
+
+.gallery-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(24, 53, 90, 0.08), rgba(24, 53, 90, 0.58)),
+    radial-gradient(circle at 18% 24%, rgba(212, 226, 255, 0.14), transparent 14%),
+    radial-gradient(circle at 84% 18%, rgba(212, 226, 255, 0.12), transparent 10%);
+  pointer-events: none;
+}
+
+.gallery-panel > * {
+  position: relative;
+  z-index: 1;
+}
+
+.section-heading {
+  margin-bottom: 1rem;
+}
+
+.section-heading-light .section-kicker,
+.section-heading-light h2 {
+  text-align: center;
+  color: #fff9ef;
+}
+
+.note-box {
+  padding: 1.35rem;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, rgba(255, 249, 228, 0.97), rgba(255, 242, 200, 0.92));
+  color: var(--text-dark);
+}
+
+.note-box p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.note-box p + p {
+  margin-top: 0.9rem;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+}
+
+.photo-frame {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 1.4rem;
+  background: rgba(255, 248, 222, 0.14);
+  border: 1px solid rgba(255, 230, 155, 0.28);
+  box-shadow: 0 18px 36px rgba(43, 24, 6, 0.26);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.photo-large {
+  grid-column: 1 / -1;
+}
+
+.photo-frame img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.photo-large img {
+  aspect-ratio: 4 / 3;
+}
+
+.photo-frame figcaption {
+  padding: 0.95rem 1rem 1.1rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.01rem;
+  color: #fff8e8;
+  background: linear-gradient(180deg, rgba(89, 57, 14, 0.12), rgba(89, 57, 14, 0.42));
+}
+
+.photo-frame:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 24px 44px rgba(17, 7, 16, 0.22);
+}
+
+.gallery-note {
+  margin-bottom: 1rem;
+  border: 1px solid rgba(255, 225, 138, 0.2);
+  background:
+    linear-gradient(180deg, rgba(255, 249, 229, 0.98), rgba(255, 239, 194, 0.94)),
+    repeating-linear-gradient(
+      180deg,
+      rgba(207, 142, 28, 0.1) 0,
+      rgba(207, 142, 28, 0.1) 1px,
+      transparent 1px,
+      transparent 2.1rem
+    );
+  box-shadow: 0 20px 42px rgba(8, 22, 47, 0.16);
+}
+
+.gallery-note p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.45rem;
+  line-height: 1.7;
+  text-align: center;
+  color: #59411a;
+}
+
+.letter-scene {
+  overflow: hidden;
+  border-color: rgba(193, 226, 255, 0.28);
+  background:
+    linear-gradient(180deg, rgba(47, 84, 120, 0.12), rgba(47, 84, 120, 0.38)),
+    url("https://commons.wikimedia.org/wiki/Special:FilePath/Vincent_van_Gogh_-_Almond_blossom_-_Google_Art_Project.jpg") center/cover;
+}
+
+.letter-scene::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(24, 53, 90, 0.06), rgba(24, 53, 90, 0.38)),
+    radial-gradient(circle at 18% 16%, rgba(255, 255, 255, 0.16), transparent 16%),
+    radial-gradient(circle at 86% 24%, rgba(255, 255, 255, 0.12), transparent 12%);
+  pointer-events: none;
+}
+
+.letter-scene > * {
+  position: relative;
+  z-index: 1;
+}
+
+.floating-hearts {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.floating-hearts span {
+  position: absolute;
+  font-size: 1.2rem;
+  color: rgba(255, 191, 211, 0.82);
+  animation: drift 4.8s ease-in-out infinite;
+}
+
+.floating-hearts span:nth-child(1) {
+  top: 5.6rem;
+  left: 1.2rem;
+}
+
+.floating-hearts span:nth-child(2) {
+  top: 8rem;
+  right: 1.4rem;
+  animation-delay: 1.2s;
+}
+
+.floating-hearts span:nth-child(3) {
+  top: 18rem;
+  right: 2.2rem;
+  animation-delay: 2.4s;
+}
+
+.letter-card {
+  position: relative;
+  margin-top: 1.25rem;
+  padding: 1rem;
+  border-radius: 1.8rem;
+  background: linear-gradient(180deg, rgba(247, 253, 255, 0.22), rgba(247, 253, 255, 0.1));
+  border: 1px solid rgba(225, 241, 255, 0.32);
+  box-shadow: 0 20px 50px rgba(20, 43, 73, 0.24);
+  transition: transform 500ms ease;
+}
+
+.letter-card.is-open {
+  transform: translateY(-0.25rem) rotate(-1.5deg);
+}
+
+.letter-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0 0.2rem 0.85rem;
+}
+
+.wax-seal {
+  display: grid;
+  place-items: center;
+  width: 4.1rem;
+  height: 4.1rem;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #ff9ebe, #ab1e50 72%);
+  color: #fff6f8;
+  font-size: 1.35rem;
+  box-shadow: 0 15px 28px rgba(10, 29, 61, 0.28);
+  cursor: pointer;
+}
+
+.letter-content {
+  position: relative;
+  padding: 1.35rem;
+  border-radius: 1.3rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(247, 250, 255, 0.98)),
+    repeating-linear-gradient(
+      180deg,
+      var(--paper-line) 0,
+      var(--paper-line) 1px,
+      transparent 1px,
+      transparent 2rem
+    );
+  color: var(--text-dark);
+  overflow: hidden;
+}
+
+.letter-content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 225, 138, 0.16), transparent 35%);
+  pointer-events: none;
+}
+
+.letter-content p {
+  position: relative;
+  margin: 0 0 0.95rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.35rem;
+  line-height: 1.5;
+  opacity: 0;
+  transform: translateY(0.8rem);
+  transition: opacity 500ms ease, transform 500ms ease;
+}
+
+.letter-card.is-open .letter-content p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.letter-card.is-open .letter-content p:nth-child(1) {
+  transition-delay: 120ms;
+}
+
+.letter-card.is-open .letter-content p:nth-child(2) {
+  transition-delay: 240ms;
+}
+
+.letter-card.is-open .letter-content p:nth-child(3) {
+  transition-delay: 360ms;
+}
+
+.letter-card.is-open .letter-content p:nth-child(4) {
+  transition-delay: 480ms;
+}
+
+.letter-card.is-open .letter-content p:nth-child(5) {
+  transition-delay: 600ms;
+}
+
+.signature {
+  margin-top: 1.6rem;
+  color: #a46b0d;
+  font-weight: 700;
+}
+
+.music-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.1rem;
+  padding: 1rem 1.15rem;
+  border-radius: 1.6rem;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(255, 207, 92, 0.42), transparent 16%),
+    radial-gradient(circle at 84% 18%, rgba(245, 190, 66, 0.28), transparent 14%),
+    radial-gradient(circle at 72% 78%, rgba(66, 128, 201, 0.32), transparent 18%),
+    linear-gradient(135deg, #0f2a54 0%, #173d73 45%, #0b1f41 100%);
+  border: 1px solid rgba(255, 216, 120, 0.18);
+  box-shadow: 0 24px 40px rgba(8, 18, 40, 0.34);
+  overflow: hidden;
+}
+
+.music-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 24% 30%, rgba(255, 226, 126, 0.18), transparent 8%),
+    radial-gradient(circle at 62% 24%, rgba(255, 226, 126, 0.12), transparent 6%),
+    radial-gradient(circle at 88% 68%, rgba(255, 226, 126, 0.12), transparent 7%);
+  pointer-events: none;
+}
+
+.music-cover-wrap {
+  position: relative;
+  flex-shrink: 0;
+  width: 5.8rem;
+  height: 5.8rem;
+}
+
+.music-cover {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.1rem;
+  border: 2px solid rgba(255, 218, 122, 0.34);
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.34);
+}
+
+.music-vinyl {
+  position: absolute;
+  top: 50%;
+  right: -1rem;
+  z-index: 1;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  background:
+    radial-gradient(circle at center, #ffe28a 0 10%, #19345f 11% 18%, #091326 19% 100%);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.06),
+    0 10px 18px rgba(0, 0, 0, 0.28);
+}
+
+.music-copy {
+  min-width: 0;
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.music-kicker,
+.music-title,
+.music-artist {
+  margin: 0;
+}
+
+.music-kicker {
+  font-size: 0.72rem;
+  letter-spacing: 0.22rem;
+  text-transform: uppercase;
+  color: rgba(255, 225, 132, 0.82);
+}
+
+.music-title {
+  margin-top: 0.35rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.62rem;
+  color: #fff8dd;
+  text-shadow: 0 2px 10px rgba(255, 214, 102, 0.16);
+}
+
+.music-artist {
+  margin-top: 0.2rem;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: rgba(230, 237, 255, 0.82);
+}
+
+.music-artist strong {
+  color: #ffe28a;
+  font-weight: 600;
+}
+
+.music-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.22rem;
+  height: 1.4rem;
+  margin-top: 0.6rem;
+}
+
+.music-bars span {
+  width: 0.22rem;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #ffe28a, #f0a23c);
+  opacity: 0.72;
+}
+
+.music-bars span:nth-child(1) {
+  height: 0.7rem;
+}
+
+.music-bars span:nth-child(2) {
+  height: 1.15rem;
+}
+
+.music-bars span:nth-child(3) {
+  height: 0.9rem;
+}
+
+.music-bars span:nth-child(4) {
+  height: 1.25rem;
+}
+
+.music-toggle {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.85rem 1.15rem;
+  background: linear-gradient(135deg, #f6c65b, #d88922);
+  color: #172d57;
+  box-shadow: 0 14px 26px rgba(11, 31, 65, 0.22);
+  cursor: pointer;
+  white-space: nowrap;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-0.7rem) scale(1.06);
+  }
+}
+
+@media (min-width: 720px) {
+  .page {
+    width: min(100%, 64rem);
+    padding: 1.5rem 1.5rem 3rem;
+  }
+
+  .hero-card {
+    min-height: 42rem;
+    padding: 2rem;
+  }
+
+  .hero-copy {
+    padding: 1.9rem 1.85rem;
+  }
+
+  .note-panel,
+  .gallery-panel,
+  .letter-scene {
+    padding: 1.8rem;
+  }
+
+  .photo-grid {
+    grid-template-columns: 1.25fr 1fr 1fr;
+  }
+
+  .photo-large {
+    grid-column: auto;
+    grid-row: 1 / 3;
+  }
+
+  .photo-large img,
+  .photo-frame img {
+    aspect-ratio: 1 / 1;
+  }
+  .music-box {
+    padding: 1.1rem 1.25rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .music-box {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .music-cover-wrap {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .music-vinyl {
+    width: 5rem;
+    height: 5rem;
+    right: 0.6rem;
+    top: auto;
+    bottom: 0.6rem;
+    transform: none;
+  }
+
+  .music-copy {
+    text-align: center;
+  }
+
+  .music-bars {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para Alguém Muito Especial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-glow glow-left"></div>
+  <div class="page-glow glow-right"></div>
+
+  <main class="page">
+    <section
+      class="hero-card"
+      data-track-src="assets/songs/Remixed Virginio Aiello.mp3"
+      data-track-kicker="Noite estrelada"
+      data-track-title="Remixed Virginio Aiello"
+      data-track-artist="Abertura da página, inspirada em Van Gogh."
+    >
+      <div class="hero-copy">
+        <h1>Um pedacinho nosso em forma de página.</h1>
+        <p class="intro">
+          Sobre a sua beleza, Vincent Van Gogh ficaria fascinado pela sua beleza...
+          Voce tem o campo de girassois em seus olhos, o ceu estrelado em seu sorriso
+          e a sua voz me lembra uma sonata de Beethoven, um tom suave e calmo.
+          Nenhuma palavra descrita no dicionario poderia descrever meu amor por voce.
+        </p>
+      </div>
+    </section>
+
+    <section
+      class="gallery-panel"
+      aria-label="Espaço para fotos"
+      data-track-src="assets/songs/Outra Vida - Armandinho (youtube).mp3"
+      data-track-kicker="Nossas fotos"
+      data-track-title="Outra Vida"
+      data-track-artist="Armandinho tocando enquanto ela vê as fotos."
+    >
+      <div class="section-heading">
+        <h2>Reserve este espaço para momentos importantes.</h2>
+      </div>
+
+      <div class="photo-grid">
+        <figure class="photo-frame photo-large">
+          <img src="assets/photos/1.jpg" alt="Foto principal do casal">
+          <figcaption>Meu amor com florzinha no cabelo.</figcaption>
+        </figure>
+
+        <figure class="photo-frame">
+          <img src="assets/photos/2.jpg" alt="Segunda foto do casal">
+          <figcaption>Meu amor com cabelinho no sol.</figcaption>
+        </figure>
+
+        <figure class="photo-frame">
+          <img src="assets/photos/3.jpg" alt="Terceira foto do casal">
+          <figcaption>Meu amor comendo Nescau.</figcaption>
+        </figure>
+      </div>
+
+      <div class="note-box gallery-note">
+        <p>
+          Meu amor, eu escolhi estas 3 fotos suas porque sao as minhas preferidas,
+          pois cada vez que eu olho para elas eu percebo o quao perdidamente apaixonado eu estou.
+        </p>
+      </div>
+    </section>
+
+    <section
+      class="letter-scene"
+      aria-label="Cartinha romântica"
+      data-track-src="assets/songs/Gigi Perez - Sailor Song (Official Music Video) - geeguscrustVEVO (youtube).mp3"
+      data-track-kicker="Cartinha"
+      data-track-title="Sailor Song"
+      data-track-artist="A música da cartinha, trocando automaticamente."
+    >
+      <div class="section-heading section-heading-light">
+        <h2>Toque no selo e revele a mensagem.</h2>
+      </div>
+
+      <div class="floating-hearts" aria-hidden="true">
+        <span>❤</span>
+        <span>❤</span>
+        <span>❤</span>
+      </div>
+
+      <article class="letter-card" data-letter-card>
+        <div class="letter-top">
+          <div class="wax-seal" data-open-letter aria-hidden="true">❤</div>
+        </div>
+
+        <div class="letter-content">
+          <p>Oi, meu amor,</p>
+          <p>
+            Desde que você chegou, os dias ganharam um tipo raro de calma e brilho.
+            Sua presença tem aquele efeito bonito de transformar o comum em memória boa.
+          </p>
+          <p>
+            Esta página é só um começo. Aqui você pode escrever a sua história, um agradecimento,
+            uma lembrança especial ou aquilo que o coração estiver pedindo.
+          </p>
+          <p>
+            Obrigado por existir do seu jeito, por ser importante para mim e por fazer
+            o mundo parecer mais leve.
+          </p>
+          <p class="signature">Com todo o meu carinho.</p>
+        </div>
+      </article>
+
+      <div class="music-box" aria-label="Controle da música">
+        <div class="music-cover-wrap">
+          <img class="music-cover" src="https://commons.wikimedia.org/wiki/Special:FilePath/Vincent_Willem_van_Gogh_127.jpg" alt="Girassóis de Van Gogh na capa da nossa música">
+          <span class="music-vinyl" aria-hidden="true"></span>
+        </div>
+
+        <div class="music-copy">
+          <p class="music-kicker" data-music-kicker>Noite estrelada</p>
+          <p class="music-title" data-music-title>Remixed Virginio Aiello</p>
+          <p class="music-artist" data-music-artist>Abertura da página, inspirada em Van Gogh.</p>
+          <div class="music-bars" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <button class="music-toggle" type="button" data-music-toggle>Tocar música</button>
+        <audio
+          data-love-song
+          preload="auto"
+          loop
+          autoplay
+          playsinline
+          src="assets/songs/Remixed Virginio Aiello.mp3"
+        ></audio>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
