@@ -22,6 +22,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
 
 body {
@@ -34,7 +35,7 @@ body {
     radial-gradient(circle at 88% 14%, rgba(255, 214, 92, 0.24), transparent 10%),
     radial-gradient(circle at 26% 84%, rgba(251, 188, 67, 0.18), transparent 14%),
     linear-gradient(180deg, rgba(10, 29, 61, 0.3), rgba(10, 29, 61, 0.46)),
-    url("https://commons.wikimedia.org/wiki/Special:FilePath/Vincent_Willem_van_Gogh_127.jpg") center top/cover fixed;
+    url("https://commons.wikimedia.org/wiki/Special:FilePath/Vincent_Willem_van_Gogh_127.jpg") center top/cover;
   overflow-x: hidden;
 }
 
@@ -87,6 +88,8 @@ button {
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow);
   backdrop-filter: blur(14px);
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .hero-card {
@@ -668,6 +671,25 @@ h2 {
 }
 
 @media (max-width: 520px) {
+  .page {
+    padding-top: 0.75rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .hero-card,
+  .gallery-panel,
+  .letter-scene {
+    min-height: calc(100vh - 1.5rem);
+  }
+
+  body {
+    background:
+      radial-gradient(circle at 12% 10%, rgba(255, 223, 117, 0.26), transparent 12%),
+      radial-gradient(circle at 88% 14%, rgba(255, 214, 92, 0.2), transparent 10%),
+      linear-gradient(180deg, rgba(10, 29, 61, 0.22), rgba(10, 29, 61, 0.36)),
+      url("assets/photos/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg.webp") center top/cover;
+  }
+
   .music-box {
     flex-direction: column;
     align-items: stretch;
